@@ -1,0 +1,3 @@
+/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/myFiveChess.dir

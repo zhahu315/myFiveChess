@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/chessManual.cpp">
+			<Option target="myFiveChess"/>
+		</Unit>
+		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/chessManual.h">
+			<Option target="myFiveChess"/>
+		</Unit>
 		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/draw.cpp">
 			<Option target="myFiveChess"/>
 		</Unit>
@@ -90,6 +96,9 @@
 			<Option target="myFiveChess"/>
 		</Unit>
 		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/play.cpp">
+			<Option target="myFiveChess"/>
+		</Unit>
+		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/play.h">
 			<Option target="myFiveChess"/>
 		</Unit>
 		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/CMakeLists.txt">

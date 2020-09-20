@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/zhangchi/OneDrive/myFiveChess/chessManual.h
+
 /Users/zhangchi/OneDrive/myFiveChess/draw.h
 
-/Users/zhangchi/OneDrive/myFiveChess/main.cpp
+/Users/zhangchi/OneDrive/myFiveChess/play.cpp
 iostream
--
-string
 -
 draw.h
 /Users/zhangchi/OneDrive/myFiveChess/draw.h
+chessManual.h
+/Users/zhangchi/OneDrive/myFiveChess/chessManual.h
 

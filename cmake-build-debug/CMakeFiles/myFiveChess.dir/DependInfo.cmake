@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/zhangchi/OneDrive/myFiveChess/chessManual.cpp" "/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/myFiveChess.dir/chessManual.cpp.o"
   "/Users/zhangchi/OneDrive/myFiveChess/draw.cpp" "/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/myFiveChess.dir/draw.cpp.o"
   "/Users/zhangchi/OneDrive/myFiveChess/main.cpp" "/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/myFiveChess.dir/main.cpp.o"
   "/Users/zhangchi/OneDrive/myFiveChess/play.cpp" "/Users/zhangchi/OneDrive/myFiveChess/cmake-build-debug/CMakeFiles/myFiveChess.dir/play.cpp.o"

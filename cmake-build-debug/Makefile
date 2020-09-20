@@ -143,6 +143,33 @@ myFiveChess/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/build
 .PHONY : myFiveChess/fast
 
+chessManual.o: chessManual.cpp.o
+
+.PHONY : chessManual.o
+
+# target to build an object file
+chessManual.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/chessManual.cpp.o
+.PHONY : chessManual.cpp.o
+
+chessManual.i: chessManual.cpp.i
+
+.PHONY : chessManual.i
+
+# target to preprocess a source file
+chessManual.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/chessManual.cpp.i
+.PHONY : chessManual.cpp.i
+
+chessManual.s: chessManual.cpp.s
+
+.PHONY : chessManual.s
+
+# target to generate assembly for a file
+chessManual.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/chessManual.cpp.s
+.PHONY : chessManual.cpp.s
+
 draw.o: draw.cpp.o
 
 .PHONY : draw.o
@@ -233,6 +260,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myFiveChess"
+	@echo "... chessManual.o"
+	@echo "... chessManual.i"
+	@echo "... chessManual.s"
 	@echo "... draw.o"
 	@echo "... draw.i"
 	@echo "... draw.s"

@@ -89,6 +89,9 @@
 		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/main.cpp">
 			<Option target="myFiveChess"/>
 		</Unit>
+		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/play.cpp">
+			<Option target="myFiveChess"/>
+		</Unit>
 		<Unit filename="/Users/zhangchi/OneDrive/myFiveChess/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

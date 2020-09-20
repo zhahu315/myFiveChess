@@ -197,6 +197,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+play.o: play.cpp.o
+
+.PHONY : play.o
+
+# target to build an object file
+play.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/play.cpp.o
+.PHONY : play.cpp.o
+
+play.i: play.cpp.i
+
+.PHONY : play.i
+
+# target to preprocess a source file
+play.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/play.cpp.i
+.PHONY : play.cpp.i
+
+play.s: play.cpp.s
+
+.PHONY : play.s
+
+# target to generate assembly for a file
+play.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myFiveChess.dir/build.make CMakeFiles/myFiveChess.dir/play.cpp.s
+.PHONY : play.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... play.o"
+	@echo "... play.i"
+	@echo "... play.s"
 .PHONY : help
 
 

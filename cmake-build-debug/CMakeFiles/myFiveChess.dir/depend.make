@@ -6,3 +6,5 @@ CMakeFiles/myFiveChess.dir/draw.cpp.o: ../draw.cpp
 CMakeFiles/myFiveChess.dir/main.cpp.o: ../draw.h
 CMakeFiles/myFiveChess.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/myFiveChess.dir/play.cpp.o: ../play.cpp
+

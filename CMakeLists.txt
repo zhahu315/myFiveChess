@@ -8,4 +8,4 @@ include_directories(.)
 add_executable(myFiveChess
         draw.cpp
         draw.h
-        main.cpp)
+        main.cpp play.cpp)

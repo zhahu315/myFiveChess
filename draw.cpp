@@ -1,6 +1,6 @@
 #include <iostream>
 
-void DisplayBoard(char (*arr)[16]) //画棋盘
+void DisplayBoard(char (*arr)[16])
 {	
 	int i, j;
 	using namespace std;
@@ -9,7 +9,7 @@ void DisplayBoard(char (*arr)[16]) //画棋盘
 	{
 		for(j = 0; j <= 15; j++)
 		{
-			switch(arr[i][j] % 100)//%100为了适应将来有分值的情形
+			switch(arr[i][j])
 			{
 			case 1:
 				cout <<"┏";

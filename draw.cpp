@@ -47,6 +47,9 @@ void DisplayBoard(char (*arr)[16])
 				cout <<"┼";
 				break;
 
+//                    case 10:
+//                    cout <<"™";
+//                    break;
 			case 10:
 				cout <<"●";
 				break;

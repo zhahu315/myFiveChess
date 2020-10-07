@@ -4,7 +4,7 @@
 
 #ifndef MYFIVECHESS_CHESSMANUAL_H
 #define MYFIVECHESS_CHESSMANUAL_H
-int checkIfOver();
+int checkGameOver();
 
 class ChessManual {
 public:

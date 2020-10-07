@@ -3,6 +3,6 @@
 //
 
 #include "chessManual.h"
-int checkIfOver(){
+int checkGameOver(){
     return 0;
 }

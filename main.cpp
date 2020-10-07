@@ -15,7 +15,8 @@ int main(){
 	cin >> isBlack;
     ClearBoardArray(arr);
     DisplayBoard(arr);
-    playChess(isBlack, gameOver, arr);
+    initPlay(0, arr);
+    playChess(gameOver, arr);
     return 0;
 }
 

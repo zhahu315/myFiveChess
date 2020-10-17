@@ -4,19 +4,21 @@
 #include "chessManual.h"
 
 using namespace std;
+//全局变量
+char board[16][16];
+int gameOver = 0;
 
-char arr[16][16];
 int main(){
-    int gameOver = 0;
 	cout << "Welcome the five chess!\n "
          "please choose which white or black chess\n "
-         "enter 1 for black and 2 for white [1 or 2]" << endl;
+         "enter '0' for white and '1' for black\n";
+	ChessManual manual;
 	int isBlack;
 	cin >> isBlack;
-    ClearBoardArray(arr);
-    DisplayBoard(arr);
-    initPlay(0, arr);
-    playChess(gameOver, arr);
+    ClearBoardArray(board);
+    DisplayBoard(board);
+    initPlay(isBlack, board);
+    playChess(gameOver, board);
     return 0;
 }
 

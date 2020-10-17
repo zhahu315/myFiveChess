@@ -4,15 +4,18 @@
 
 #ifndef MYFIVECHESS_CHESSMANUAL_H
 #define MYFIVECHESS_CHESSMANUAL_H
-int checkGameOver();
-
 class ChessManual {
 public:
-    int stepOfPlayer = 0;
-    int stepOfComputer = 0;
+    ChessManual();
+    int getManual();
+    void record(int x, int y);
+    void count();
+private:
+    char manual[16][16];
     int step = 0;
 
 };
 
+int checkGameOver(ChessManual manual);
 
 #endif //MYFIVECHESS_CHESSMANUAL_H

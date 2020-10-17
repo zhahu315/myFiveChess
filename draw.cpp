@@ -1,6 +1,6 @@
 #include <iostream>
 
-void DisplayBoard(char (*arr)[16])
+void DisplayBoard(char arr[16][16])
 {	
 	int i, j;
 	using namespace std;
@@ -65,7 +65,6 @@ void DisplayBoard(char (*arr)[16])
 
 				case 22:
 			        cout << char(64+j);
-
 			}
 			if (j == 14)
 			{
@@ -75,7 +74,7 @@ void DisplayBoard(char (*arr)[16])
 	}
 }
 
-void ClearBoardArray(char (*arr)[16])
+void ClearBoardArray(char arr[16][16])
 {
 	int i, j; //i＝行，j＝列
 	arr[0][0] = 1;

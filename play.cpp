@@ -45,7 +45,7 @@ int playChess(int gameover, ChessManual manual, char arr[16][16]){
         manual.record(x, y);
         manual.count();
 
-        gameover = checkGameOver(ChessManual manual);
+        gameover = checkGameOver(manual);
         if (gameover == 1){
             cout << "YOU WIN !!!" << endl;
             break;
@@ -56,7 +56,7 @@ int playChess(int gameover, ChessManual manual, char arr[16][16]){
     return 0;
 }
 
-int computerRun(int gameover, char arr[16][16]) {
+int computerRun(int gameover, char arr[16][16], ChessManual manual) {
     char coordinate[3];
     cout << "enter the coordinate:";
     cin >> coordinate;
@@ -69,7 +69,7 @@ int computerRun(int gameover, char arr[16][16]) {
     arr[x][y] = 21;
 
     DisplayBoard(arr);
-    checkGameOver();
+    checkGameOver(manual);
     arr[x][y] = 20;
     return 0;
 }

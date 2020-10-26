@@ -11,57 +11,57 @@ void DisplayBoard(char arr[16][16])
 		{
 			switch(arr[i][j])
 			{
-			case 1:
-				cout <<"â”";
-				break;
+                case 1:
+                    printf("©³");
+                    break;
 
-			case 2:
-				cout <<"â”“";
-				break;
+                case 2:
+                    printf("©·");
+                    break;
 
-			case 3:
-				cout <<"â”›";
-				break;
+                case 3:
+                    printf("©¿");
+                    break;
 
-			case 4:
-				cout <<"â”—";
-				break;
+                case 4:
+                    printf("©»");
+                    break;
 
-			case 5:
-				cout <<"â” ";
-				break;
+                case 5:
+                    printf("©Ä");
+                    break;
 
-			case 6:
-				cout <<"â”¯";
-				break;
+                case 6:
+                    printf("©Ó");
+                    break;
 
-			case 7:
-				cout <<"â”¨";
-				break;
+                case 7:
+                    printf("©Ì");
+                    break;
 
-			case 8:
-				cout <<"â”·";
-				break;
+                case 8:
+                    printf("©Û");
+                    break;
 
-			case 9:
-				cout <<"â”¼";
-				break;
+                case 9:
+                    printf("©à");
+                    break;
 
-			case 10:
-				cout <<"â—";
-				break;
+                case 10:
+                    printf("¡ñ");
+                    break;
 
-			case 11:
-				cout <<"â–²";
-				break;
+                case 11:
+                    printf("¡ø");
+                    break;
 
-			case 20:
-				cout <<"â—Ž";
-				break;
+                case 20:
+                    printf("¡ò");
+                    break;
 
-			case 21:
-				cout <<"â–³";
-				break;
+                case 21:
+                    printf("¡÷");
+                    break;
 
 				case 22:
 			        cout << char(64+j);
@@ -76,7 +76,7 @@ void DisplayBoard(char arr[16][16])
 
 void ClearBoardArray(char arr[16][16])
 {
-	int i, j; //iï¼è¡Œï¼Œjï¼åˆ—
+	int i, j; //i£½ÐÐ£¬j£½ÁÐ
 	arr[0][0] = 1;
 	arr[0][14] = 2;
 	arr[14][14] = 3;

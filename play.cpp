@@ -7,16 +7,16 @@
 
 using namespace std;
 int initPlay(int isBlack, char arr[16][16]);
-int playChess(int gameover, char arr[16][16]);
-int computerRun(int gameover, char arr[16][16]);
+int playChess(int gameover, char arr[16][16], ChessManual& manual);
+int computerRun(int gameover, char arr[16][16], ChessManual& manual);
 
 
 
-int initPlay(int isBlack, char arr[16][16]){
+int initPlay(int isBlack, char arr[16][16], ChessManual& manual){
     if (isBlack == 1) {
 
         cout << "You go first, enter the coordinate (for example 'A6')\n" << endl;
-        playChess(0, arr);
+        playChess(0, arr, manual);
     }
     return 0;
 }
@@ -24,9 +24,10 @@ int initPlay(int isBlack, char arr[16][16]){
 //判断禁手
 int ifBan(char arr[16][16]){
 
+    return 0;
 }
 
-int playChess(int gameover, ChessManual manual, char arr[16][16]){
+int playChess(int gameover, char arr[16][16], ChessManual& manual){
     char coordinate[3];
     while (gameover == 0) {
         cout << "enter the coordinate:";
@@ -50,13 +51,13 @@ int playChess(int gameover, ChessManual manual, char arr[16][16]){
             cout << "YOU WIN !!!" << endl;
             break;
         }
-        computerRun(0, arr);
+        computerRun(0, arr, manual);
     }
     cout << "YOU LOSE !!!" << endl;
     return 0;
 }
 
-int computerRun(int gameover, char arr[16][16], ChessManual manual) {
+int computerRun(int gameover, char arr[16][16], ChessManual& manual) {
     char coordinate[3];
     cout << "enter the coordinate:";
     cin >> coordinate;

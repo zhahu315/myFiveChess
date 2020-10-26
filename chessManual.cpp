@@ -5,7 +5,7 @@
 #include "chessManual.h"
 
 
-int checkGameOver(ChessManual manual){
+int checkGameOver(ChessManual& manual){
     int (*arr)[16] = new int[16][16];
 
     **arr = manual.getManual();

@@ -16,6 +16,6 @@ private:
 
 };
 
-int checkGameOver(ChessManual manual);
+int checkGameOver(ChessManual& manual);
 
 #endif //MYFIVECHESS_CHESSMANUAL_H

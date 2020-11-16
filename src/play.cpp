@@ -13,6 +13,9 @@ int initPlay(int isBlack, char arr[16][16], ChessManual& manual){
     return 0;
 };
 
+Ai::Ai() {
+
+}
 
 int Ai::situationScore(int role, ChessManual &manual) {
     string player[4];

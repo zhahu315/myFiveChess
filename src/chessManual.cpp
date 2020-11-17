@@ -5,8 +5,7 @@
 #include "../include/chessManual.h"
 
 bool ChessManual::checkIfBan(int x, int y, int role) {
-    if(iManual[x][y] != 0) return true;
-    return false;
+    return iManual[x][y] != 0;
 }
 
 int ChessManual::checkGameOver(int* p_isWin) {

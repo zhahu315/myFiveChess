@@ -25,7 +25,7 @@ int playChess(int isGameOver, int isBlack, int role , int* p_isWin, char arr[16]
     int x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//将后面输入的数字转为纵坐标
 
     while (manual.checkIfBan(x, y, role)){
-        cout << "the position is illegal, please enter other coordinate";
+        cout << "the position is illegal, please enter another coordinate";
         cin >> coordinate;
         y = int(toupper(coordinate[0])) - 65;//将输入的字母改为列坐标，并强制大写
         x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//将后面输入的数字转为纵坐标

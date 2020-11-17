@@ -14,7 +14,7 @@ public:
     bool checkIfBan(int x, int y, int role);
 
 private:
-    int iManual[15][15];
+    int iManual[15][15]={0};
     int playerScore = 0;
     int computerScore = 0;
 

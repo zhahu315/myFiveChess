@@ -4,8 +4,9 @@
 
 #include "../include/chessManual.h"
 
-int ChessManual::checkIfBan(int role) {
-    return 0;
+bool ChessManual::checkIfBan(int x, int y, int role) {
+    if(iManual[x][y] != 0) return true;
+    return false;
 }
 
 int ChessManual::checkGameOver(int* p_isWin) {
@@ -60,7 +61,7 @@ int ChessManual::checkGameOver(int* p_isWin) {
 
 
 ChessManual::ChessManual() {
-    iManual[16][16] = {0};
+    iManual[15][15] = {0};
 }
 
 void ChessManual::record(int x, int y, int role) {

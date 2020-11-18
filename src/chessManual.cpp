@@ -59,10 +59,6 @@ int ChessManual::checkGameOver(int* p_isWin) {
 }
 
 
-ChessManual::ChessManual() {
-    iManual[15][15] = {0};
-}
-
 void ChessManual::record(int x, int y, int role) {
     iManual[x][y] = role;
 }
@@ -71,3 +67,5 @@ void ChessManual::record(int x, int y, int role) {
 int ChessManual::getManualValue(int x, int y) {
     return iManual[x][y];
 }
+
+ChessManual::ChessManual() = default;

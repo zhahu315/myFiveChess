@@ -36,7 +36,6 @@ int playChess(int isGameOver, int isBlack, int role , int* p_isWin, char arr[16]
     DisplayBoard(arr);
     arr[x][y] = isBlack ? 10:20;
 
-    ai.setLastStep(x, y);
 
     manual.record(x, y, role);
 
@@ -58,8 +57,9 @@ int playChess(int isGameOver, int isBlack, int role , int* p_isWin, char arr[16]
 int computerRun(int isGameOver, int isBlack, int role , int* p_isWin, char arr[16][16], ChessManual& manual, Ai& ai) {
     role = 2;
     int x, y;
-
-
+    ai.getNextStep(role, manual);
+    x = ai.getNextStepX();
+    y = ai.getNextStepY();
 
     manual.checkIfBan(x, y, role);
     manual.checkGameOver(p_isWin);

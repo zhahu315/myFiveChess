@@ -8,7 +8,7 @@
 class ChessManual {
 public:
     ChessManual();
-    int getManualValue(int x, int y);//返回数组指针
+    int getManualValue(int x, int y);
     void record(int x, int y, int role);
     int checkGameOver(int* isWin);
     bool checkIfBan(int x, int y, int role);

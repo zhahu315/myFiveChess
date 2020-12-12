@@ -64,7 +64,7 @@ void DisplayBoard(char arr[16][16])
                     break;
 
 				case 22:
-			        cout << char(64+j);
+				    printf("%c ", char(64+j));
 			}
 			if (j == 14)
 			{

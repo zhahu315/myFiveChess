@@ -20,7 +20,6 @@ int main(){
 	cin >> isBlack;
     ClearBoardArray(board);
     DisplayBoard(board);
-    initPlay(isBlack, board, manual);
     playChess(isGameOver, isBlack, role, p_isWin, board, manual, ai);
     return 0;
 }

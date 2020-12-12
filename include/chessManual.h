@@ -12,7 +12,7 @@ public:
     void record(int x, int y, int role);
     int checkGameOver(int* isWin);
     bool checkIfBan(int x, int y, int role);
-
+    bool checkIfHasChess(int x, int y);
 private:
     int iManual[15][15]={0};
     int playerScore = 0;

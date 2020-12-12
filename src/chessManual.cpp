@@ -4,8 +4,36 @@
 
 #include "../include/chessManual.h"
 
+bool ChessManual::checkIfHasChess(int x, int y) {
+    if (iManual[x][y] != 0) {
+        return true;
+    }
+    else return false;
+}
+
 bool ChessManual::checkIfBan(int x, int y, int role) {
-    return iManual[x][y] != 0;
+    int count =0;
+    int temp[21][21] ={0};
+    for (int i=0;i<15;i++){
+        for (int j=0;j<15;j++){
+            temp[i+3][j+3] = iManual[i][j];
+        }
+    }
+    if (temp[x][y+1]==role && temp[x][y+2]==role && temp[x][y+3]==role) count++;
+    if (temp[x][y-1]==role && temp[x][y-2]==role && temp[x][y-3]==role) count++;
+
+    if (temp[x+1][y]==role && temp[x+2][y]==role && temp[x+3][y]==role) count++;
+    if (temp[x-1][y]==role && temp[x-2][y]==role && temp[x-3][y]==role) count++;
+
+    if (temp[x+1][y-1]==role && temp[x+2][y-2]==role && temp[x+3][y-3]==role) count++;
+    if (temp[x-1][y-1]==role && temp[x-2][y-2]==role && temp[x-3][y-3]==role) count++;
+
+    if (temp[x+1][y+1]==role && temp[x+2][y+2]==role && temp[x+3][y+3]==role) count++;
+    if (temp[x-1][y+1]==role && temp[x-2][y+2]==role && temp[x-3][y+3]==role) count++;
+
+    if (count >=2) {
+        return true;}
+    else return false;
 }
 
 int ChessManual::checkGameOver(int* p_isWin) {

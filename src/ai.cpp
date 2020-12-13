@@ -86,7 +86,6 @@ int Ai::findPosition(ChessManual& manual,int i, int j, int role){
             sum += scoreTable(blackChess, whiteChess, role);
         }
     }
-
     return sum;
 }
 

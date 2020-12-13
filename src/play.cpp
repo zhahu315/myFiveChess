@@ -1,5 +1,5 @@
 //
-// Created by å¼ å¼› on 2020/9/20.
+// Created by ÕÅ³Ú on 2020/9/20.
 //
 #include <iostream>
 #include "../include/draw.h"
@@ -13,7 +13,7 @@ using namespace std;
 int initPlay(int isBlack, char arr[16][16], ChessManual& manual, Ai& ai){
     ClearBoardArray(arr);
     DisplayBoard(arr);
-    if (isBlack == 1){
+    if (isBlack == 0){
         manual.initManual();
         int x = 7;
         int y = 7;
@@ -21,12 +21,11 @@ int initPlay(int isBlack, char arr[16][16], ChessManual& manual, Ai& ai){
         manual.record(x, y, 2);
         DisplayBoard(arr);
         arr[x][y] = 10;
-        playChess(0, 1, 1, arr, manual, ai);
-
+        playChess(0, 0, 1, arr, manual, ai);
     }
     else {
         manual.initManual();
-        playChess(0, 0, 1, arr, manual, ai);
+        playChess(0, 1, 1, arr, manual, ai);
     }
     return 0;
 }
@@ -35,44 +34,48 @@ int playChess(int isGameOver, int isBlack, int role , char arr[16][16], ChessMan
     role = 1;
     char coordinate[3];
 
-    cout << "è¯·è¾“å…¥åæ ‡æŒ‰ä¸‹å›è½¦ï¼ˆä¾‹å¦‚ï¼š'H6'ï¼Œ'F12'ï¼Œä¸åŒºåˆ†å¤§å°å†™ï¼‰>>>";
+    cout << "ÇëÊäÈë×ø±ê°´ÏÂ»Ø³µ£¨ÀıÈç£º'H6'£¬'F12'£¬²»Çø·Ö´óĞ¡Ğ´£©>>>";
     cin >> coordinate;
 
-    int y = int(toupper(coordinate[0])) - 65;//å°†è¾“å…¥çš„å­—æ¯æ”¹ä¸ºåˆ—åæ ‡ï¼Œå¹¶å¼ºåˆ¶å¤§å†™
-    int x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//å°†åé¢è¾“å…¥çš„æ•°å­—è½¬ä¸ºçºµåæ ‡
+    int y = int(toupper(coordinate[0])) - 65;//½«ÊäÈëµÄ×ÖÄ¸¸ÄÎªÁĞ×ø±ê£¬²¢Ç¿ÖÆ´óĞ´
+    int x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//½«ºóÃæÊäÈëµÄÊı×Ö×ªÎª×İ×ø±ê
 
     while (manual.checkIfBan(x, y, role) || manual.checkIfHasChess(x, y)){
-        cout << "ä½ é€‰æ‹©çš„è½å­ç‚¹çŠ¯è§„ï¼Œè¯·é‡æ–°é€‰æ‹©ã€‚" << endl;
+        cout << "ÄãÑ¡ÔñµÄÂä×Óµã·¸¹æ£¬ÇëÖØĞÂÑ¡Ôñ¡£" << endl;
         cin >> coordinate;
-        y = int(toupper(coordinate[0])) - 65;//å°†è¾“å…¥çš„å­—æ¯æ”¹ä¸ºåˆ—åæ ‡ï¼Œå¹¶å¼ºåˆ¶å¤§å†™
-        x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//å°†åé¢è¾“å…¥çš„æ•°å­—è½¬ä¸ºçºµåæ ‡
+        y = int(toupper(coordinate[0])) - 65;//½«ÊäÈëµÄ×ÖÄ¸¸ÄÎªÁĞ×ø±ê£¬²¢Ç¿ÖÆ´óĞ´
+        x = (coordinate[2] != '\0') ? 15 - ((coordinate[1] - 48) * 10 + (coordinate[2] - 48)) : 15 - (coordinate[1] - 48);//½«ºóÃæÊäÈëµÄÊı×Ö×ªÎª×İ×ø±ê
     }
 
     arr[x][y] = isBlack ? 11:21;
     manual.setLastStep(x, y);
 
     int *computerScore = ai.getNextStepScore();
-    isGameOver = manual.checkGameOver(role, computerScore);
+    int score = ai.findPosition(manual, x, y, role);
+    isGameOver = manual.checkGameOver(role, score);
     DisplayBoard(arr);
     arr[x][y] = isBlack ? 10:20;
 
     manual.record(x, y, role);
 
-    for (int j = 0;j<15;++j){
-        for (int k = 0;k<15;++k){
-            printf("%d",manual.getManualValue(j,k));
-        }
-        printf("\n");
-    }
+//    for (int j = 0;j<15;++j){
+//        for (int k = 0;k<15;++k){
+//            printf("%d",manual.getManualValue(j,k));
+//        }
+//        printf("\n");
+//    }
 
 
     if (isGameOver == 1){
-        printf("=====ä½ èµ¢äº†è¿™ä¸€å±€ï¼Œç›®å‰æ¯”åˆ† ä½ %d:%dç”µè„‘=====\n", manual.getPlayerScore(), manual.getComputerScore());
+        printf("=====ÄãÓ®ÁËÕâÒ»¾Ö£¬Ä¿Ç°±È·Ö Äã%d:%dµçÄÔ=====\n", manual.getPlayerScore(), manual.getComputerScore());
         cin.get();
         if (manual.getPlayerScore() == 2){
-            cout << "=====ä½ è¾“æ‰äº†è¿™åœºæ¸¸æˆ!!!=====" << endl;
+            cout << "=====ÄãÊäµôÁËÕâ³¡ÓÎÏ·!!!=====" << endl;
             cin.get();
-        } else initPlay(isBlack, arr, manual, ai);
+        } else {
+            isBlack = !isBlack;
+            initPlay(isBlack, arr, manual, ai);
+        }
     }else computerRun(isGameOver, isBlack, role, arr, manual, ai);
 
     return 0;
@@ -87,33 +90,30 @@ int computerRun(int isGameOver, int isBlack, int role , char arr[16][16], ChessM
 
     manual.setLastStep(x, y);
     int *computerScore = ai.getNextStepScore();
-    isGameOver = manual.checkGameOver(role, computerScore);
-
+    isGameOver = manual.checkGameOver(role, *computerScore);
 
     arr[x][y] = isBlack ? 21:11;
     manual.record(x, y, role);
     DisplayBoard(arr);
 
-
-
-
-    for (int j = 0;j<15;++j){
-        for (int k = 0;k<15;++k){
-            printf("%d",manual.getManualValue(j,k));
-        }
-        printf("\n");
-    }
-    printf("score = %d\n", *ai.getNextStepScore());
+//    for (int j = 0;j<15;++j){
+//        for (int k = 0;k<15;++k){
+//            printf("%d",manual.getManualValue(j,k));
+//        }
+//        printf("\n");
+//    }
+//    printf("score = %d\n", *ai.getNextStepScore());
 
     arr[x][y] = isBlack ? 20:10;
 
     if (isGameOver == 1) {
-        printf("=====ä½ è¾“äº†è¿™ä¸€å±€ï¼Œç›®å‰æ¯”åˆ† ä½ %d:%dç”µè„‘=====\n", manual.getPlayerScore(), manual.getComputerScore());
+        printf("=====ÄãÊäÁËÕâÒ»¾Ö£¬Ä¿Ç°±È·Ö Äã%d:%dµçÄÔ=====\n", manual.getPlayerScore(), manual.getComputerScore());
         cin.get();
         if (manual.getComputerScore() == 2){
-            cout << "=====ä½ è¾“äº†è¿™åœºæ¸¸æˆ!!!=====" << endl;
+            cout << "=====ÄãÊäÁËÕâ³¡ÓÎÏ·!!!=====" << endl;
             cin.get();
         } else{
+            isBlack = !isBlack;
             initPlay(isBlack, arr, manual, ai);
         }
     }else playChess(isGameOver, isBlack, role, arr, manual, ai);

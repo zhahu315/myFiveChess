@@ -3,24 +3,20 @@
 #include "../include/play.h"
 
 using namespace std;
-//å…¨å±€å˜é‡
+//È«¾Ö±äÁ¿
 char board[16][16];
 int isGameOver = 0;
 int role = 0;
 
 int main(){
-	cout << "=========äº”å­æ£‹æ¸¸æˆ========== \n "
-         "=====è¯·é€‰æ‹©å…ˆæ‰‹è¿˜æ˜¯åæ‰‹===== \n "
-         "è¾“å…¥'0'å¹¶å›è½¦æ‰§ç™½æ£‹ï¼Œè¾“å…¥'1'å¹¶å›è½¦æ‰§é»‘æ£‹>>> \n";
+	cout << "=========Îå×ÓÆåÓÎÏ·========== \n "
+         "=====ÇëÑ¡ÔñÏÈÊÖ»¹ÊÇºóÊÖ===== \n "
+         "ÊäÈë'0'²¢»Ø³µÖ´°×Æå£¬ÊäÈë'1'²¢»Ø³µÖ´ºÚÆå>>> \n";
 	ChessManual manual;
 	Ai ai;
 	int isBlack;
 	cin >> isBlack;
-	if(isBlack ==1){
-        ClearBoardArray(board);
-        DisplayBoard(board);
-        playChess(isGameOver, isBlack, role, board, manual, ai);
-	}
-	else initPlay(1, board, manual, ai);
+    ClearBoardArray(board);
+    initPlay(isBlack, board, manual, ai);
     return 0;
 }

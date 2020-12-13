@@ -36,38 +36,12 @@ bool ChessManual::checkIfBan(int x, int y, int role) {
     else return false;
 }
 
-int ChessManual::checkGameOver(int role, int* pInt) {
-    if (role ==1) {
-        for (int i = 0; i < 15; i++) {
-            for (int j = 0; j < 15; j++) {
-                if ((iManual[i][j] == 1 && iManual[i - 1][j - 1] == 1 && iManual[i - 2][j - 2] == 1 &&
-                     iManual[i - 3][j - 3] == 1 && iManual[i - 4][j - 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i + 1][j - 1] == 1 && iManual[i + 2][j - 2] == 1 &&
-                     iManual[i + 3][j - 3] == 1 && iManual[i + 4][j - 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i - 1][j + 1] == 1 && iManual[i - 2][j + 2] == 1 &&
-                     iManual[i - 3][j + 3] == 1 && iManual[i - 4][j + 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i + 1][j + 1] == 1 && iManual[i + 2][j + 2] == 1 &&
-                     iManual[i + 3][j + 3] == 1 && iManual[i + 4][j + 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i][j - 1] == 1 && iManual[i][j - 2] == 1 && iManual[i][j - 3] == 1 &&
-                     iManual[i][j - 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i][j + 1] == 1 && iManual[i][j + 2] == 1 && iManual[i][j + 3] == 1 &&
-                     iManual[i][j + 4] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i - 1][j] == 1 && iManual[i - 2][j] == 1 && iManual[i - 3][j] == 1 &&
-                     iManual[i - 4][j] == 1) ||
-                    (iManual[i][j] == 1 && iManual[i + 1][j] == 1 && iManual[i + 2][j] == 1 && iManual[i + 3][j] == 1 &&
-                     iManual[i + 4][j] == 1)) {
-                    playerScore += 1;
-                    return 1;
-                }
-            }
-        }
-    }
-
-    else if (*pInt > 800000)
+int ChessManual::checkGameOver(int role, int score) {
+    if (score > 800000)
     {
         computerScore +=1;
         return 1;
-    }
+    }else return 0;
 }
 
 

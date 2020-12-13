@@ -11,7 +11,7 @@ public:
     ChessManual();
     int getManualValue(int x, int y);
     void record(int x, int y, int role);
-    int checkGameOver(int role, int* pInt);
+    int checkGameOver(int role, int score);
     bool checkIfBan(int x, int y, int role);
     bool checkIfHasChess(int x, int y);
     void setLastStep(int x, int y);

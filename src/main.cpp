@@ -5,22 +5,23 @@
 using namespace std;
 //全局变量
 char board[16][16];
-int isWin = 0;
 int isGameOver = 0;
 int role = 0;
 
 int main(){
-	cout << "Welcome the five chess!\n "
-         "please choose which white or black chess\n "
-         "enter '0' for white and '1' for black\n";
+	cout << "=========五子棋游戏========== \n "
+         "=====请选择先手还是后手===== \n "
+         "输入'0'并回车执白棋，输入'1'并回车执黑棋>>> \n";
 	ChessManual manual;
-	int* p_isWin = &isWin;
 	Ai ai;
 	int isBlack;
 	cin >> isBlack;
-    ClearBoardArray(board);
-    DisplayBoard(board);
-    playChess(isGameOver, isBlack, role, p_isWin, board, manual, ai);
+	if(isBlack ==1){
+        ClearBoardArray(board);
+        DisplayBoard(board);
+        playChess(isGameOver, isBlack, role, board, manual, ai);
+	}
+	else initPlay(1, board, manual, ai);
     return 0;
 }
 

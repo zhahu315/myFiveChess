@@ -12,20 +12,15 @@ public:
     static int findPosition(ChessManual& manual,int i, int j, int role);
     static int scoreTable(int black, int white, int C_ME);
     int getNextStep(int role, ChessManual& manual);
-    void setNextStep(int x, int y);
     int getNextStepX() const;
     int getNextStepY() const;
-    int getNextStepScore() const;
+    int* getNextStepScore();
     struct Position{
         int x=0;
         int y=0;
     };
 private:
-    int score{};
     int nextStepScore;
-    int nextPosition[15]{};
-    int lastStepX{};
-    int lastStepY{};
     int nextStepX{};
     int nextStepY{};
 };

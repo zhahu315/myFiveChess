@@ -3,9 +3,10 @@
 //
 #include "ai.h"
 
-using namespace std;
 
-Ai::Ai() =default;
+Ai::Ai() {
+    nextStepScore = 0;
+}
 
 int Ai::findPosition(ChessManual& manual,int i, int j, int role){
     int sum=0;
@@ -145,6 +146,7 @@ int Ai::getNextStepY() const {
     return nextStepY;
 }
 
-int Ai::getNextStepScore() const{
-    return nextStepScore;
+int* Ai::getNextStepScore(){
+    int* p = &nextStepScore;
+    return p;
 }

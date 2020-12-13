@@ -119,4 +119,3 @@ int computerRun(int isGameOver, int isBlack, int role , char arr[16][16], ChessM
     }else playChess(isGameOver, isBlack, role, arr, manual, ai);
     return 0;
 }
-

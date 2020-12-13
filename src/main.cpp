@@ -24,6 +24,3 @@ int main(){
 	else initPlay(1, board, manual, ai);
     return 0;
 }
-
-
-

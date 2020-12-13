@@ -62,28 +62,7 @@ int ChessManual::checkGameOver(int role, int* pInt) {
             }
         }
     }
-//    else {
-//        if ((iManual[i][j] == 2 && iManual[i - 1][j - 1] == 2 && iManual[i - 2][j - 2] == 2 &&
-//             iManual[i - 3][j - 3] == 2 && iManual[i - 4][j - 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i + 1][j - 1] == 2 && iManual[i + 2][j - 2] == 2 &&
-//             iManual[i + 3][j - 3] == 2 && iManual[i + 4][j - 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i - 1][j + 1] == 2 && iManual[i - 2][j + 2] == 2 &&
-//             iManual[i - 3][j + 3] == 2 && iManual[i - 4][j + 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i + 1][j + 1] == 2 && iManual[i + 2][j + 2] == 2 &&
-//             iManual[i + 3][j + 3] == 2 && iManual[i + 4][j + 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i][j - 1] == 2 && iManual[i][j - 2] == 2 &&
-//             iManual[i][j - 3] == 2 && iManual[i][j - 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i][j + 1] == 2 && iManual[i][j + 2] == 2 &&
-//             iManual[i][j + 3] == 2 && iManual[i][j + 4] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i - 1][j] == 2 && iManual[i - 2][j] == 2 &&
-//             iManual[i - 3][j] == 2 && iManual[i - 4][j] == 2) ||
-//            (iManual[i][j] == 2 && iManual[i + 1][j] == 2 && iManual[i + 2][j] == 2 &&
-//             iManual[i + 3][j] == 2 && iManual[i + 4][j] == 2)) {
-//            pInt += 1;
-//            return 1;
-//            }
-//        else return 0;
-//    }
+
     else if (*pInt > 800000)
     {
         computerScore +=1;
